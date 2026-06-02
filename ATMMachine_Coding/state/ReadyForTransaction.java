@@ -21,6 +21,11 @@ public class ReadyForTransaction implements State {  // While Ready-for-transact
     AtmIdDTO atmIdDTO= new AtmIdDTO(atm.getAtmId());  // Creating AtmIdDTO object using the ATM ID from the ATM model
     int newTxnId= this.MachineApi.createTransaction(atmIdDTO); // Calling the createTransaction method of the ATMMachineApi to create a new transaction and get the transaction ID
 		return newTxnId;  // Returning the transaction ID to the caller
+
+
+    // Now that we have the transaction ID from the backend so now we have to shift the state from init Transaction to read card details.
+
+    this.atm.changeState(new ReadCardDetailsAndPin());
 	}
 
 	@Override

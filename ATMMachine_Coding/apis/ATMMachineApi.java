@@ -1,6 +1,7 @@
 package ATMMachine_Coding.apis;
 
 import ATMMachine_Coding.Dtos.AtmIdDTO;
+import ATMMachine_Coding.Dtos.UpdateAtmStateDto;
 
 public class ATMMachineApi implements APIInterface{
   // this is only responsible for connecting to the backend and get response from it
@@ -20,6 +21,12 @@ public class ATMMachineApi implements APIInterface{
     // 3) Return the transaction ID
     return newTransactionId;
   }
+  
+  @Override
+  public boolean updateState(UpdateAtmStateDto updateAtmState){
+    // Assume we have some logics to change this state
 
+    return true;
+  }
 
 }
