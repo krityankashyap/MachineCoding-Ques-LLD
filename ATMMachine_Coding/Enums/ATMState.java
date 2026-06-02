@@ -1,0 +1,15 @@
+package ATMMachine_Coding.Enums;
+
+public enum ATMState {
+
+  READY_FOR_TRANSACTION,
+
+  READ_CARD_DETAILS_AND_PIN,
+
+  DESPENSING_CASH,
+
+  EJECTING_CARD,
+
+  READ_CASH_WITHDRAWAL_DETAILS
+
+}
